@@ -1,8 +1,6 @@
-<p align="center">Schedule</p>
+<h1>Schedule</h1>
 
 ## Prerequiries
-
-<hr>
 
 <ul>
   <li>PHP 7</li>
@@ -13,8 +11,6 @@
 
 ## Installation
 
-<hr>
-
 <ul>
   <li>Clone the repository</li>
   <li>Installer back dependencies with <code>composer install</code></li>
@@ -23,12 +19,10 @@
   <li>Generate JWT key with <code>php artisan jwt:secret</code></li>
   <li>Launch migrations with <code>php artisan migrate --seed</code></li>
   <li>Install front dependencies with <code>npm i</code></li>
-  <li>npm i axios --save-dev</li>
-  <li>npm i vue-axios --save-dev</li>
-  <li>npm i vue-router --save-dev</li>
-  <li>npm i @websanova/vue-auth --save-dev</li>
-  <li>Install front dependencies with npm i</li>
-  <li>Install front dependencies with npm i</li>
+  <li><code>npm i axios --save-dev</code></li>
+  <li><code>npm i vue-axios --save-dev</code></li>
+  <li><code>npm i vue-router --save-dev</code></li>
+  <li><code>npm i @websanova/vue-auth --save-dev</code></li>
   <li>Build front with <code>npm run watch</code></li>
 </ul>
 
