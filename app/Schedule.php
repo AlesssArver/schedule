@@ -10,11 +10,11 @@ class Schedule extends Model
 
     public function path()
     {
-      return '/schedule/' . $this->id;
+        return '/schedule/' . $this->id;
     }
 
     public function user()
     {
-      return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

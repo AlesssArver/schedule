@@ -5,12 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
-    protected $guarded = [];
 
     /**
      * The attributes that are mass assignable.
@@ -41,6 +40,16 @@ class User extends Authenticatable
 
     public function schedule()
     {
-      return $this->hasMany(Schedule::class);
+        return $this->hasMany(Schedule::class);
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }
