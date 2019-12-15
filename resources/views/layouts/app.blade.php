@@ -26,7 +26,7 @@
                     <div class="columns">
                         <div class="column"></div>
                         <div class="column is-2">
-                            <router-link to="/registry">
+                            <router-link to="/register">
                                 <a>Registry</a>
                             </router-link>
                         </div>

@@ -3,7 +3,8 @@
         <div class="column"></div>
         <div class="column is-6">
             <div class="title">Register</div>
-            <form @submit.prevent="submit" method="post">
+            <p v-if="success">U a registered!</p>
+            <form @submit.prevent="submit" v-if="!success" method="post">
                 <div class="field">
                     <div class="control">
                         <input type="text" class="input" placeholder="Name" required v-model="name">
@@ -51,26 +52,26 @@ export default {
     },
     methods: {
         submit() {
+            var app = this
             this.$auth.register({
                 data: {
-                    email: this.email,
-                    password: this.password,
-                    password_confirmation: this.password_confirmation
+                    name: app.name,
+                    email: app.email,
+                    password: app.password,
+                    password_confirmation: app.password_confirmation
                 },
-                success: () => {
-                    this.success = true,
-                        this.$router.push({
-                            name: 'login',
-                            params: {
-                                successRegistrationRedirect: true
-                            }
-                        })
+                success() {
+                    app.success = true
+                    this.$router.push({
+                        name: 'login',
+                        params: {successRegistrationRedirect: true}
+                    })
                 },
-                error: (res) => {
+                error(res) {
                     console.log(res.response.data.errors)
-                    this.has_error = true
-                    this.error = res.response.data.error
-                    this.errors = res.response.data.errors || {}
+                    app.has_error = true
+                    app.error = res.response.data.error
+                    app.errors = res.response.data.errors || {}
                 }
             })
         }
