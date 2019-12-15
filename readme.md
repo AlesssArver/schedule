@@ -19,10 +19,6 @@
   <li>Generate JWT key with <code>php artisan jwt:secret</code></li>
   <li>Launch migrations with <code>php artisan migrate --seed</code></li>
   <li>Install front dependencies with <code>npm i</code></li>
-  <li><code>npm i axios --save-dev</code></li>
-  <li><code>npm i vue-axios --save-dev</code></li>
-  <li><code>npm i vue-router --save-dev</code></li>
-  <li><code>npm i @websanova/vue-auth --save-dev</code></li>
   <li>Build front with <code>npm run watch</code></li>
 </ul>
 
