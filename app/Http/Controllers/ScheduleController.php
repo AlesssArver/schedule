@@ -20,11 +20,13 @@ class ScheduleController extends Controller
 
     public function store()
     {
-        return  Schedule::create([
+        Schedule::create([
             'user_id' => auth()->id(),
             'title' => request('title'),
             'time'  => request('time')
         ]);
+
+        return ['message' => 'Schedule cheated!'];
     }
 
     public function edit(Request $request, $id)

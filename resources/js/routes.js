@@ -4,7 +4,7 @@ let routes = [
   {
     path: '/',
     component: require('./components/Home').default,
-    meta: { auth: undefined }
+    meta: { auth: false }
   },
   {
     path: '/register',

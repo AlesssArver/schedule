@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/api/schedule', 'ScheduleController@index');
+Route::post('/api/schedule/store', 'ScheduleController@store');
 
 Route::get('/', function () {
     return view('welcome');

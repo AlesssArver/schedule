@@ -28,6 +28,8 @@
   "dependencies": {
     "es6-promise": "^4.2.8",
     "vue-axios": "latest",
-    "@websanova/vue-auth": "latest"
+    "@websanova/vue-auth": "latest",
+    "socket.io-client": "latest",
+    "express": "latest"
   }
 }
